@@ -1,0 +1,13 @@
+// 文本溢出
+@mixin ellipsis($n) {
+    @if ($n > 1) {
+        display: -webkit-box;
+        -webkit-line-clamp: $n;
+        -webkit-box-orient: vertical;
+    }
+    @else {
+        white-space: nowrap;
+    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
